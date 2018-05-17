@@ -26,13 +26,13 @@ public class MeetingRestController {
 
 	@Autowired
 	MeetingService meetingService;
-
+	
 	@Autowired
 	ParticipantService participantService;
 
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ResponseEntity<?> getMeetings() {
-
+		// TEST HEROKU
 		Collection<Meeting> meetings = meetingService.getAll();
 		return new ResponseEntity<Collection<Meeting>>(meetings, HttpStatus.OK);
 	}
