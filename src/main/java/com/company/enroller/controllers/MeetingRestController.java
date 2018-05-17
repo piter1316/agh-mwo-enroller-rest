@@ -33,6 +33,7 @@ public class MeetingRestController {
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ResponseEntity<?> getMeetings() {
 		// TEST HEROKU
+		// TEST HEROKU 2
 		Collection<Meeting> meetings = meetingService.getAll();
 		return new ResponseEntity<Collection<Meeting>>(meetings, HttpStatus.OK);
 	}
